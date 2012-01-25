@@ -16,6 +16,7 @@ set ruler
 set backupdir=/tmp
 set directory=/tmp
 set foldmethod=manual
+set vb
 
 " Syntax
 syntax on
@@ -24,6 +25,9 @@ set background=dark
 filetype plugin on
 filetype indent off
 set foldmethod=manual
+
+" Custom filetypes
+au BufNewFile,BufRead *.md set ft=markdown
 
 " Change tabline colors
 hi! TabLineFill term=underline cterm=underline gui=underline
@@ -42,13 +46,13 @@ if has('gui_running')
     color solarized
     set guioptions+=mTrbLl
     set guioptions-=mTrbLl
-    set guifont=DejaVu\ Sans\ Mono\ 10
+    set guifont=Menlo:h12
 
     set cursorline
 
     " Change font size
-    map <silent> <leader>+ :set guifont=DejaVu\ Sans\ Mono\ 14<CR>
-    map <silent> <leader>- :set guifont=DejaVu\ Sans\ Mono\ 10<CR>
+    map <silent> <leader>+ :set guifont=Menlo:h14<CR>
+    map <silent> <leader>- :set guifont=Menlo:h12<CR>
 endif
 
 " Fix ' uselessness with marks

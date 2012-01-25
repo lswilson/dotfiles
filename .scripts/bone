@@ -13,8 +13,7 @@ curl http://documentcloud.github.com/underscore/underscore.js > js/libs/undersco
 curl http://documentcloud.github.com/backbone/backbone.js > js/libs/backbone.js 
 
 # Echo out the index.html template
-echo "
-<!doctype html>
+echo "<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -25,14 +24,13 @@ echo "
 
 <body>
   
-  <script src="js/libs/jquery.js"></script>
-  <script src="js/libs/underscore.js"></script>
-  <script src="js/libs/backbone.js"></script>
+  <script src=\"js/libs/jquery.js\"></script>
+  <script src=\"js/libs/underscore.js\"></script>
+  <script src=\"js/libs/backbone.js\"></script>
   <script>
 
   </script>
 </body>
-</html>
-" > index.html
+</html>" > index.html
 
 vim

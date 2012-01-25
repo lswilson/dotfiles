@@ -55,7 +55,11 @@ PROMPT='%{$fg[magenta]%}%n%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}
 
 # Overrides
 export PATH=~/.scripts:$PATH
+export PATH=/usr/local/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules/
 export EDITOR=vim
+export SITE_CONTENT_KEY=d41d8cd98f00b204e9800998ecf8427e
 
 alias up='make update'
+
+[[ -s "/Users/timbranyen/.rvm/scripts/rvm" ]] && source "/Users/timbranyen/.rvm/scripts/rvm"  # This loads RVM into a shell session.
