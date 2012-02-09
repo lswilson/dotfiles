@@ -21,8 +21,8 @@ set colorcolumn=80
 
 " Syntax
 syntax on
-color twilight256
 set background=dark
+color wombat256mod
 filetype plugin on
 filetype indent off
 set foldmethod=manual
@@ -49,6 +49,9 @@ hi! TabLineFillEnd term=underline cterm=underline gui=underline
 
 " Change column color
 hi ColorColumn ctermbg=darkgrey guibg=darkgrey
+" Change background color
+hi Normal ctermfg=252 ctermbg=234 cterm=none guifg=#e3e0d7 guibg=darkgrey gui=none
+hi LineNr		ctermfg=241		ctermbg=234		cterm=none		guifg=#857b6f	guibg=#242424	gui=none
 
 " Save folds
 " au BufWinLeave * silent! mkview

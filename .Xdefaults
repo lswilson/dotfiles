@@ -6,10 +6,10 @@
 ! ----------------------------------------------------------------------------
 
 ! Colors
-URxvt.background:  #232526
+URxvt.background:  #1c1c1c
 URxvt.foreground:  #efefcf
-URxvt*color0:      #232526
-URxvt*color1:      #9e1828
+URxvt*color0:      #1c1c1c
+URxvt*color1:      #ff9383
 URxvt*color2:      #aece92
 URxvt*color3:      #ffd674
 URxvt*color4:      #7ab2ff
