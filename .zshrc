@@ -36,6 +36,10 @@ function box_name {
   [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
 }
 
+function lambda {
+  echo 'λ' && return
+}
+
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}!"
@@ -51,7 +55,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 #  zle reset-prompt
 #}
 preexec () { print -rn -- $terminfo[el]; }
-PROMPT='%{$fg[magenta]%}%n%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)$(virtualenv_info) $ '
+PROMPT='%{$fg[magenta]%}%n%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg[red]%}$(lambda)%{$reset_color%} '
 
 # Overrides
 export PATH=~/.scripts:$PATH

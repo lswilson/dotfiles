@@ -1,8 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/timbranyen/git/fashionapp/www/build'
-let g:netrw_dirhist_2='/Users/timbranyen/git/backbone-boilerplate/build'
-let g:netrw_dirhist_3='/Users/timbranyen/git/backbone.layoutmanager/test'
-let g:netrw_dirhist_4='/Users/timbranyen/git/site-content/posts/require_use_shim'
-let g:netrw_dirhist_5='/Users/timbranyen/git/fashionapp'
-let g:netrw_dirhist_6='/Users/timbranyen/bocoup/training-demo/build'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/timbranyen/git/backbone-boilerplate/assets/js/libs'
+let g:netrw_dirhist_2='/Users/timbranyen/git/grunt/tasks'

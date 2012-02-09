@@ -1,42 +1,36 @@
-taglist-plus.vim
-================
+# moonscript-vim
 
-This is a fork of the popular taglist.vim plugin.
+Adds syntax highlighting and indent support for MoonScript in vim.
 
-Taglist-plus provides excellent Javascript support via jsctags. See [here][1]
-for examples.
+## Install
 
-This plugin can also be obtained through [vim.org][2].
+### Using [Vundle](https://github.com/gmarik/vundle)
 
-Installation
-------------
+1. Add the following to your `.vimrc` where other bundles are located:
+       
+		Bundle 'leafo/moonscript-vim'
 
-Unzip the plugin files to your `.vim` directory.
+2. Run from command line:
 
-For great Javascript support, jsctags is required as well.
+		$ vim +BundleInstall
 
-jsctags can be obtained via [github][4]. It requires a recent version of
-node.js -- the default one provided in Maverick Meerkat won't cut it. You can
-[build it from source][6] or get it via [this PPA][5].
+### Using [pathogen](https://github.com/tpope/vim-pathogen)
 
-If you're going the PPA route, you'll need to map `nodejs` to `node`. Here are
-the commands:
-<pre>
-sudo add-apt-repository ppa:richarvey/nodester
-sudo apt-get update
-sudo apt-get install nodejs
-sudo ln -s /usr/bin/nodejs /usr/local/bin/node
-</pre>
+1. Check out the repository into your bundle path:
 
-Usage
------
+        $ cd ~/.vim/bundle
+        $ git clone git://github.com/leafo/moonscript-vim.git
 
-`:TlistToggle` brings up the taglist window.  More commands can be found via
-`:help taglist-commands`.
+### Normal
 
-[1]:http://discontinuously.com/2011/03/vim-support-javascript-taglist-plus/
-[2]:https://github.com/int3/vim-taglist-plus
-[3]:http://www.vim.org/scripts/script.php?script_id=3504
-[4]:https://github.com/mozilla/doctorjs
-[5]:https://launchpad.net/~richarvey/+archive/nodester
-[6]:http://nodejs.org/#download
+1. Check out the repository and copy the following to `.vim/` directory or any
+   other run time path, keeping their directory structure intact:
+
+		syntax/moon.vim
+		indent/moon.vim
+		ftdetect/moon.vim
+
+## Thanks
+
+Special thanks to the <https://github.com/kchmck/vim-coffee-script> project. I
+copied the syntax and indent code as a starting point.

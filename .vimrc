@@ -17,6 +17,7 @@ set backupdir=/tmp
 set directory=/tmp
 set foldmethod=manual
 set vb
+set colorcolumn=80
 
 " Syntax
 syntax on
@@ -26,6 +27,17 @@ filetype plugin on
 filetype indent off
 set foldmethod=manual
 
+" Testing out unicode support
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
+
 " Custom filetypes
 au BufNewFile,BufRead *.md set ft=markdown
 
@@ -34,6 +46,9 @@ hi! TabLineFill term=underline cterm=underline gui=underline
 
 hi! TabLineFillEnd term=underline cterm=underline gui=underline
       \ ctermfg=white ctermbg=black guifg=white guibg=black
+
+" Change column color
+hi ColorColumn ctermbg=darkgrey guibg=darkgrey
 
 " Save folds
 " au BufWinLeave * silent! mkview
