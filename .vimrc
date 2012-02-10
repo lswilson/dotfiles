@@ -48,10 +48,10 @@ hi! TabLineFillEnd term=underline cterm=underline gui=underline
       \ ctermfg=white ctermbg=black guifg=white guibg=black
 
 " Change column color
-hi ColorColumn ctermbg=darkgrey guibg=darkgrey
+hi ColorColumn ctermbg=235 guibg=darkgrey
 " Change background color
 hi Normal ctermfg=252 ctermbg=234 cterm=none guifg=#e3e0d7 guibg=darkgrey gui=none
-hi LineNr		ctermfg=241		ctermbg=234		cterm=none		guifg=#857b6f	guibg=#242424	gui=none
+hi LineNr ctermfg=241 ctermbg=234 cterm=none guifg=#857b6f guibg=#242424 gui=none
 
 " Save folds
 " au BufWinLeave * silent! mkview
