@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# Copyright 2012, Tim Branyen @tbranyen <tim@tabdeveloper.com>
+# Dual licensed under the MIT and GPL licenses.
+#
+# Automatically download and install the Backbone Boilerplate.
+#
+# Install: curl https://gist.github.com/raw/1596382/bbb.sh > /usr/local/bin/bbb
+#          chmod +x /usr/local/bin/bbb
+#
+
+# Default install path
+INSTALL_PATH=.
+# Default Git repository path
+REPO=http://github.com/tbranyen/backbone-boilerplate
+
+function main {
+  # Passed a path argument
+  args=$*
+  if [ $# -gt 0 ]; then
+    INSTALL_PATH=$args
+  fi
+
+  # Clone the repository
+  git clone -q $REPO $INSTALL_PATH
+
+  # Change into the new folder
+  if [ $INSTALL_PATH != '.' ]; then
+    cd $INSTALL_PATH
+  fi
+
+  # Delete the .git folder
+  rm -rf .git
+}
+
+main $*

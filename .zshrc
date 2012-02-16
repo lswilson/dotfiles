@@ -65,6 +65,6 @@ export EDITOR=vim
 export SITE_CONTENT_KEY=d41d8cd98f00b204e9800998ecf8427e
 
 alias up='make update'
-alias chrome-dev='chromium --disable-web-security 2&> /dev/null &'
+alias chrome-dev='google-chrome --disable-web-security 2&> /dev/null &'
 
 [[ -s "/Users/timbranyen/.rvm/scripts/rvm" ]] && source "/Users/timbranyen/.rvm/scripts/rvm"  # This loads RVM into a shell session.
