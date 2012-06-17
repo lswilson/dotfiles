@@ -44,6 +44,11 @@ URxvt.urlLauncher: firefox
 URxvt.matcher.button: 2
 URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
+! OS X Stuff
+URxvt.perl-ext-common: macosx-clipboard
+URxvt*keysym.M-c: perl:macosx-clipboard:copy
+URxvt*keysym.M-v: perl:macosx-clipboard:paste
+
 ! Tabs support
 URxvt.perl-ext-common:  default,tabbed
 URxvt.tabbed.tabbar-fg: 2

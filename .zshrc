@@ -57,14 +57,21 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 preexec () { print -rn -- $terminfo[el]; }
 PROMPT='%{$fg[magenta]%}%n%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) %{$fg[red]%}$(lambda)%{$reset_color%} '
 
-# Overrides
+# Path overrides
 export PATH=~/.scripts:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/Cellar/ruby/1.9.2-p290/bin:$PATH
+export PATH=~/.cabal/bin:$PATH
+export PATH=./node_modules/.bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
+# Other overrides
 export NODE_PATH=/usr/local/lib/node_modules/
 export EDITOR=vim
 export SITE_CONTENT_KEY=d41d8cd98f00b204e9800998ecf8427e
 
 alias up='make update'
 alias chrome-dev='google-chrome --disable-web-security 2&> /dev/null &'
+alias sub-pull='git submodule foreach git pull'
 
 [[ -s "/Users/timbranyen/.rvm/scripts/rvm" ]] && source "/Users/timbranyen/.rvm/scripts/rvm"  # This loads RVM into a shell session.
