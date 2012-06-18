@@ -29,6 +29,9 @@ URxvt*color15:     #ffffff
 Xft.dpi: 96.0
 Xft.antialias: true
 
+! Set the Perl lib
+!URxvt.perl-lib: /usr/lib/urxvt/perl/
+
 ! Look and feel
 URxvt*scrollBar_right: false
 URxvt*scrollBar: false
@@ -44,12 +47,19 @@ URxvt.urlLauncher: firefox
 URxvt.matcher.button: 2
 URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
+! Load extensions
+URxvt.perl-ext-common:  default,tabbed,clipboard
+
 ! Tabs support
-URxvt.perl-ext-common:  default,tabbed
 URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg:    2
 URxvt.tabbed.tab-bg:    0
+
+! Copy and Paste
+URxvt.keysym.Control-Mod1-c:   perl:clipboard:copy
+URxvt.keysym.Control-Mod1-v:   perl:clipboard:paste
+URxvt.keysym.Control-Mod1-C-v: perl:clipboard:paste_escaped
 
 ! Compatibility settings
 URxvt*termName: rxvt-256color

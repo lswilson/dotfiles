@@ -25,7 +25,6 @@ set background=dark
 color wombat256mod
 filetype plugin on
 filetype indent off
-set foldmethod=manual
 
 " Testing out unicode support
 if has("multi_byte")
@@ -42,10 +41,10 @@ endif
 au BufNewFile,BufRead *.md set ft=markdown
 
 " Change tabline colors
-hi! TabLineFill term=underline cterm=underline gui=underline
-
-hi! TabLineFillEnd term=underline cterm=underline gui=underline
-      \ ctermfg=white ctermbg=black guifg=white guibg=black
+"hi! TabLineFill term=underline cterm=underline gui=underline
+"
+"hi! TabLineFillEnd term=underline cterm=underline gui=underline
+"      \ ctermfg=white ctermbg=black guifg=white guibg=black
 
 " Change column color
 hi ColorColumn ctermbg=235 guibg=darkgrey
@@ -64,7 +63,7 @@ if has('gui_running')
     color solarized
     set guioptions+=mTrbLl
     set guioptions-=mTrbLl
-    set guifont=Menlo:h12
+    set guifont=DejaVu\ Sans\ Mono\ 10
 
     set cursorline
 
