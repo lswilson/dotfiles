@@ -7,6 +7,9 @@ set modeline
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set backspace=indent,eol,start
 set nocompatible
+set laststatus=2
+set t_Co=256
+set encoding=utf-8
 set showmatch
 set incsearch
 set hidden
@@ -18,6 +21,9 @@ set directory=/tmp
 set foldmethod=manual
 set vb
 set colorcolumn=80
+
+" Power Line font
+let g:Powerline_symbols = 'fancy'
 
 " Syntax
 syntax on
@@ -64,13 +70,14 @@ if has('gui_running')
 "    color solarized
     set guioptions+=mTrbLl
     set guioptions-=mTrbLl
-    set guifont=Menlo:h12
+    "set guifont=Menlo:h12
+    set guifont=Menlo\ for\ Powerline:h14
 
     set cursorline
 
     " Change font size
-    map <silent> <leader>+ :set guifont=Menlo:h14<CR>
-    map <silent> <leader>- :set guifont=Menlo:h12<CR>
+    "map <silent> <leader>+ :set guifont=Menlo:h14<CR>
+    "map <silent> <leader>- :set guifont=Menlo:h12<CR>
 endif
 
 " Fix ' uselessness with marks
