@@ -7,6 +7,9 @@ set modeline
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set backspace=indent,eol,start
 set nocompatible
+set laststatus=2
+set t_Co=256
+set encoding=utf-8
 set showmatch
 set incsearch
 set hidden
@@ -18,6 +21,9 @@ set directory=/tmp
 set foldmethod=manual
 set vb
 set colorcolumn=80
+
+" Power Line font
+"let g:Powerline_symbols = 'fancy'
 
 " Syntax
 syntax on
@@ -41,15 +47,15 @@ endif
 au BufNewFile,BufRead *.md set ft=markdown
 
 " Change tabline colors
-"hi! TabLineFill term=underline cterm=underline gui=underline
-"
-"hi! TabLineFillEnd term=underline cterm=underline gui=underline
-"      \ ctermfg=white ctermbg=black guifg=white guibg=black
+hi! TabLineFill term=underline cterm=underline gui=underline
+
+hi! TabLineFillEnd term=underline cterm=underline gui=underline
+      \ ctermfg=white ctermbg=black guifg=#FFFFFF guibg=#000000
 
 " Change column color
-hi ColorColumn ctermbg=235 guibg=darkgrey
+hi ColorColumn ctermbg=235 guibg=#383838
 " Change background color
-hi Normal ctermfg=252 ctermbg=234 cterm=none guifg=#e3e0d7 guibg=darkgrey gui=none
+hi Normal ctermfg=252 ctermbg=234 cterm=none guifg=#e3e0d7 guibg=#242424 gui=none
 hi LineNr ctermfg=241 ctermbg=234 cterm=none guifg=#857b6f guibg=#242424 gui=none
 
 " Save folds
@@ -59,17 +65,16 @@ hi LineNr ctermfg=241 ctermbg=234 cterm=none guifg=#857b6f guibg=#242424 gui=non
 " GUI Stuff
 if has('gui_running')
     set mouse=a
-    set background=light
-    color solarized
+"    set background=light
+"    color solarized
     set guioptions+=mTrbLl
     set guioptions-=mTrbLl
     set guifont=DejaVu\ Sans\ Mono\ 10
-
     set cursorline
 
     " Change font size
-    map <silent> <leader>+ :set guifont=Menlo:h14<CR>
-    map <silent> <leader>- :set guifont=Menlo:h12<CR>
+    "map <silent> <leader>+ :set guifont=Menlo:h14<CR>
+    "map <silent> <leader>- :set guifont=Menlo:h12<CR>
 endif
 
 " Fix ' uselessness with marks
@@ -84,6 +89,9 @@ let mapleader = ","
 
 " Insert a linebreak
 noremap <leader>j i<Enter><Esc>
+
+" Insert a linebreak
+noremap <leader>g :!grunt<Enter>
 
 "Automatically reload .vimrc if it changes
 autocmd! bufwritepost .vimrc source %

@@ -30,7 +30,7 @@ Xft.dpi: 96.0
 Xft.antialias: true
 
 ! Set the Perl lib
-!URxvt.perl-lib: /usr/lib/urxvt/perl/
+URxvt.perl-lib: ~/git/dotfiles/urxvt/perl
 
 ! Look and feel
 URxvt*scrollBar_right: false
@@ -47,19 +47,23 @@ URxvt.urlLauncher: firefox
 URxvt.matcher.button: 2
 URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
-! Load extensions
-URxvt.perl-ext-common:  default,tabbed,clipboard
+! Load extensions.
+URxvt.perl-ext-common:  default,tabbed,clipboard,url-select
 
-! Tabs support
+! Tabs support.
 URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg:    2
 URxvt.tabbed.tab-bg:    0
 
-! Copy and Paste
-URxvt.keysym.Control-Mod1-c:   perl:clipboard:copy
-URxvt.keysym.Control-Mod1-v:   perl:clipboard:paste
-URxvt.keysym.Control-Mod1-C-v: perl:clipboard:paste_escaped
+! Copy and paste.
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+! Url selection.
+URxvt.urlLauncher: chromium
+URxvt.underlineURLs: true
 
 ! Compatibility settings
 URxvt*termName: rxvt-256color
